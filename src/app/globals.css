@@ -1,5 +1,9 @@
+:root {
+  --back-ground-col: rgba(210, 210, 210, 0.3);
+}
 * {
   margin: 0;
+  list-style-type: none;
 }
 a {
   color: inherit;

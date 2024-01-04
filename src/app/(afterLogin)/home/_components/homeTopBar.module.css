@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  grid-template-columns: 47% 47%;
+  height: inherit;
+}
+
+.menu {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

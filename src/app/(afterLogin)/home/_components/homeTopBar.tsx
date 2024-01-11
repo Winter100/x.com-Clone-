@@ -14,6 +14,13 @@ export default function HomeTopBar() {
             <div>_____</div>
           </div>
         </div>
+        <div className={styles.follow}>
+          <div>
+            <div>팔로우 중</div>
+            <div>_____</div>
+          </div>
+        </div>
+        <div className={styles.setting}>설정</div>
       </div>
     </TopBarProvider>
   );

@@ -1,11 +1,24 @@
 .container {
   display: grid;
-  grid-template-columns: 47% 47%;
+  grid-template-columns: 47% 47% 6%;
   height: inherit;
 }
 
 .menu {
   border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.follow {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.setting {
   display: flex;
   align-items: center;
   justify-content: center;

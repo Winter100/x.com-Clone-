@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { FormEventHandler, useState } from "react";
 import styles from "./LoginModalPage.module.css";
 import { useRouter } from "next/navigation";
 
@@ -11,9 +11,17 @@ export default function LoginForm() {
 
   const onChangeId = () => {};
   const onChagePassword = () => {};
-  const formSubmitHandler = () => {};
+  const formSubmitHandler: FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+    onLoginHandler();
+  };
+
   const backMoveHandler = () => {
     router.back();
+  };
+
+  const onLoginHandler = () => {
+    router.replace("/home");
   };
   return (
     <div className={styles.container}>

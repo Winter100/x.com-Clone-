@@ -1,0 +1,9 @@
+@import url("/src/app/globals.css");
+
+.container {
+  border-bottom: 1px solid var(--color-gray-rgb-180);
+}
+
+.ul {
+  padding: 0;
+}

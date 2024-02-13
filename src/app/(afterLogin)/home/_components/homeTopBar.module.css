@@ -1,25 +1,32 @@
+@import url("/src/app/globals.css");
+
 .container {
   display: grid;
   grid-template-columns: 47% 47% 6%;
   height: inherit;
 }
 
-.menu {
-  border: 1px solid black;
+.menu_hover:hover {
+  cursor: pointer;
+  background-color: var(--back-ground-col);
+}
+
+.setting_container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.follow {
-  border: 1px solid black;
+.setting_div {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 90%;
+  height: 50%;
 }
 
-.setting {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.setting_div:hover {
+  cursor: pointer;
+  background-color: var(--back-ground-col);
+  border-radius: 50%;
 }

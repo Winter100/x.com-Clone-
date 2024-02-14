@@ -1,4 +1,4 @@
-@import url("/src/app/globals.css");
+/* @import url("/src/app/globals.css"); */
 .container {
   display: grid;
   grid-template-columns: 7% 93%;

@@ -1,12 +1,11 @@
 "use client";
 
 import Item from "@/app/_components/item/Item";
-import { getPhotos } from "@/app/util/axios/getData";
-import { useInfiniteQuery } from "@tanstack/react-query";
 import styles from "./homeItemList.module.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loading from "@/app/_components/loading/loading";
 import Link from "next/link";
+import { useHomeInfinite } from "@/app/util/tanstack-query/useHomeInfinite";
 
 export interface ItemType {
   id: number;
@@ -15,23 +14,12 @@ export interface ItemType {
 }
 
 export default function HomeCommend() {
-  const initalUrl = "https://jsonplaceholder.typicode.com/photos?_page=1";
-
   const { data, fetchNextPage, hasNextPage, isLoading, isError } =
-    useInfiniteQuery({
-      queryKey: ["photos"],
-      queryFn: ({ pageParam }) => getPhotos(pageParam),
-      initialPageParam: initalUrl,
-      getNextPageParam: (_, pages) => {
-        if (pages.length < 10) {
-          return `${pages.length + 1}`;
-        } else {
-          return undefined;
-        }
-      },
-    });
+    useHomeInfinite();
 
-  if (isLoading) return <Loading />;
+  const LoadingNum = new Array(3).fill("");
+
+  if (isLoading) return LoadingNum.map((item) => <Loading key={item} />);
 
   return (
     <InfiniteScroll

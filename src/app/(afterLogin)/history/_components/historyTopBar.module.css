@@ -1,0 +1,18 @@
+.container {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 16px 0 16px;
+}
+
+.image:hover {
+  background-color: rgba(192, 192, 192, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.upload {
+  font-size: 1.2rem;
+  font-weight: 600;
+}

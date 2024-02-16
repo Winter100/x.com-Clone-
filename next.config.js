@@ -5,6 +5,13 @@ const nextConfig = {
     config.cache = false;
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: "via.placeholder.com",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

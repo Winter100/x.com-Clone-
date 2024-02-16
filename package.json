@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.20.2",
+    "@tanstack/react-query-devtools": "^5.20.2",
+    "axios": "^1.6.7",
     "next": "^14.0.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-infinite-scroll-component": "^6.1.0",
+    "zustand": "^4.5.0"
   },
   "devDependencies": {
     "@types/node": "^20",

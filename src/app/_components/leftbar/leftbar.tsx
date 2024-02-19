@@ -1,25 +1,22 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./leftbar.module.css";
-import homeSvg from "../../../../public/home.svg";
-import searchSvg from "../../../../public/search.svg";
-import xLogo from "../../../../public/X-Logo.png";
 import Image from "next/image";
 
 export default function Leftbar() {
   return (
     <nav className={styles.nav}>
       <Link href={"/home"} className={styles.xlogo}>
-        <Image src={xLogo} alt="X-Logo" width={24} height={24} />
+        <Image src={"/X-Logo.png"} alt="X-Logo" width={24} height={24} />
       </Link>
       <ul className={styles.ul}>
         <li className={styles.li}>
           <Link href={"/home"} className={styles.liLink}>
             <div className={styles.content}>
               <div className={styles.image}>
-                <Image src={homeSvg} alt="Home" fill />
+                <Image src={"/home.svg"} alt="Home" fill />
               </div>
-              <div>홈홈홈홈홈</div>
+              <div>홈</div>
             </div>
           </Link>
         </li>
@@ -27,9 +24,9 @@ export default function Leftbar() {
           <Link href={"/explore"} className={styles.liLink}>
             <div className={styles.content}>
               <div className={styles.image}>
-                <Image src={homeSvg} alt="Home" fill />
+                <Image src={"/search.svg"} alt="Home" fill />
               </div>
-              <div>explore</div>
+              <div>검색</div>
             </div>
           </Link>
         </li>
@@ -37,7 +34,7 @@ export default function Leftbar() {
           게시하기
         </button>
       </ul>
-      <div>유저 정보</div>
+      <div>테스트 유저</div>
     </nav>
   );
 }

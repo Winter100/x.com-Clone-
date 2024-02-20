@@ -20,7 +20,9 @@ export default function Write() {
             </li>
           </ul>
           <div>
-            <button className={styles.btn}>게시하기</button>
+            <button disabled className={styles.btn}>
+              게시하기
+            </button>
           </div>
         </div>
       </div>

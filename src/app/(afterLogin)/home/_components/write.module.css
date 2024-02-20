@@ -60,7 +60,3 @@
   border: none;
   background-color: var(--back-ground-blue-0_3);
 }
-
-.btn:hover {
-  cursor: pointer;
-}

@@ -17,9 +17,7 @@ export default function HomeCommend() {
   const { data, fetchNextPage, hasNextPage, isLoading, isError } =
     useHomeInfinite();
 
-  const LoadingNum = new Array(3).fill("");
-
-  if (isLoading) return LoadingNum.map((item) => <Loading key={item} />);
+  if (isLoading) return <Loading />;
 
   return (
     <InfiniteScroll
@@ -29,9 +27,9 @@ export default function HomeCommend() {
       hasMore={hasNextPage}
       scrollThreshold={0.8}
     >
-      {data?.pages.map((item) => {
+      {data?.pages.map((item, idx) => {
         return item?.data.map((item: ItemType) => (
-          <li key={item?.id} className={styles.container}>
+          <li key={`t${item?.id}`} className={styles.container}>
             <Link href={`/history/status/${item.id}`}>
               <Item item={item} />
             </Link>

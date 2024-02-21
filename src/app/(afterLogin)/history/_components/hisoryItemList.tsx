@@ -20,7 +20,7 @@ export default function HisoryItemList() {
     <div style={{ margin: "auto" }}>
       <Item item={data?.data} />
       {DUMMY.map((_, idx) => (
-        <Comment key={idx} />
+        <Comment key={`key${idx}`} />
       ))}
     </div>
   );

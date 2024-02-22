@@ -1,0 +1,8 @@
+.container {
+  height: inherit;
+  display: grid;
+  grid-template-columns: 80% 5%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}

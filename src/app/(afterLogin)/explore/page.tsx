@@ -1,4 +1,3 @@
-import React from "react";
 import ExploreTopBar from "./_components/exploreTopBar";
 import styles from "./page.module.css";
 import TrendList from "@/app/_components/trend/trendList";

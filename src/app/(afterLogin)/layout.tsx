@@ -5,8 +5,10 @@ import TanstackProvider from "../_components/tanstackProvider/tanstackProvider";
 
 export default function AfterLoginLayout({
   children,
+  right,
 }: {
   children: React.ReactNode;
+  right: React.ReactNode;
 }) {
   return (
     <div className={styles.container}>
@@ -17,9 +19,7 @@ export default function AfterLoginLayout({
       <section className={styles.section}>
         <TanstackProvider>{children}</TanstackProvider>
       </section>
-      <div>
-        <p>오른쪽 사이드바</p>
-      </div>
+      <div className={styles.right}>{right}</div>
       <div />
     </div>
   );

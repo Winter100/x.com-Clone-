@@ -4,10 +4,14 @@
   height: 99dvh;
 
   display: grid;
-  grid-template-columns: 10% 20% 40% 20% 10%;
+  grid-template-columns: 10% 20% 40% 25% 5%;
 }
 
 .section {
   border-left: 1px solid rgba(180, 180, 180, 0.9);
   border-right: 1px solid rgba(180, 180, 180, 0.9);
+}
+
+.right {
+  padding: 0.5rem;
 }

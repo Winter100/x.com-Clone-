@@ -1,0 +1,15 @@
+.commend {
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.footer_image:hover {
+  border-radius: 50%;
+  background-color: rgba(255, 164, 164, 0.3);
+}
+
+.footer_span {
+  font-size: 0.8rem;
+}

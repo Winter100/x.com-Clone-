@@ -1,0 +1,13 @@
+.setting_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 50%;
+}
+
+.setting_div:hover {
+  cursor: pointer;
+  background-color: var(--back-ground-col);
+  border-radius: 50%;
+}

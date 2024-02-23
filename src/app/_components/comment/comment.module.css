@@ -1,0 +1,10 @@
+.content {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}

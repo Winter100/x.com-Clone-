@@ -1,6 +1,13 @@
 :root {
-  --back-ground-col: rgba(210, 210, 210, 0.3);
+  --back-ground-col: rgba(192, 192, 192, 0.2);
+  --back-ground-blue-0_3: rgba(29, 155, 240, 0.3);
+  --color-gray-rgb-180: rgb(180, 180, 180);
 }
+
+body {
+  overflow: scroll; /* 또는 overflow: auto; */
+}
+
 * {
   margin: 0;
   list-style-type: none;

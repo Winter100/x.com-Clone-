@@ -1,16 +1,19 @@
-import Loading from "@/app/_components/loading/loading";
-import { useHomeInfinite } from "@/app/util/tanstack-query/useHomeInfinite";
-import InfiniteScroll from "react-infinite-scroll-component";
-import Link from "next/link";
-import Item from "@/app/_components/item/Item";
-import { ItemType } from "./commend";
-import styles from "./follow.module.css";
+"use client";
 
-export default function Follow() {
+import { ItemType } from "@/app/(afterLogin)/home/_components/commend";
+import Item from "@/app/_components/item/Item";
+import Loading from "@/app/_components/loading/loading";
+import { useSearchInfinte } from "@/app/util/tanstack-query/useSearchInfinte";
+import Link from "next/link";
+import InfiniteScroll from "react-infinite-scroll-component";
+
+export default function SearchItemList() {
   const { data, fetchNextPage, hasNextPage, isLoading, isError } =
-    useHomeInfinite();
+    useSearchInfinte();
 
   if (isLoading) return <Loading />;
+
+  console.log(data);
 
   return (
     <InfiniteScroll
@@ -20,11 +23,10 @@ export default function Follow() {
       hasMore={hasNextPage}
       scrollThreshold={0.8}
     >
-      <h4 className={styles.h4}>추천과 동일한 데이터가 출력됩니다.</h4>
       {data?.pages.map((item, idx) => {
         return item?.data.map((item: ItemType) => (
           <li key={`t${item?.id}`}>
-            <Link href={`/history/status/${item.id}`}>
+            <Link href={`/history/comment/${item.id}`}>
               <Item item={item} />
             </Link>
           </li>

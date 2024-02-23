@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  gap: 1px;
+
+  padding: 0.5rem;
+}
+
+.container:hover {
+  cursor: pointer;
+  background-color: var(--back-ground-col);
+}

@@ -1,0 +1,23 @@
+.container {
+  background-color: var(--back-ground-col);
+
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  padding: 0.5rem;
+}
+
+.btn {
+  width: 6rem;
+  height: 2.5rem;
+  background-color: black;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  border-radius: 25px;
+
+  cursor: pointer;
+}

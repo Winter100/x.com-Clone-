@@ -1,7 +1,6 @@
 "use client";
 
 import Item from "@/app/_components/item/Item";
-import styles from "./homeItemList.module.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loading from "@/app/_components/loading/loading";
 import Link from "next/link";
@@ -9,8 +8,10 @@ import { useHomeInfinite } from "@/app/util/tanstack-query/useHomeInfinite";
 
 export interface ItemType {
   id: number;
-  title: string;
-  url: string;
+  title?: string;
+  url?: string;
+  name?: string;
+  body?: string;
 }
 
 export default function HomeCommend() {
@@ -29,7 +30,7 @@ export default function HomeCommend() {
     >
       {data?.pages.map((item, idx) => {
         return item?.data.map((item: ItemType) => (
-          <li key={`t${item?.id}`} className={styles.container}>
+          <li key={`t${item?.id}`}>
             <Link href={`/history/status/${item.id}`}>
               <Item item={item} />
             </Link>

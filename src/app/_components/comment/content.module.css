@@ -1,0 +1,9 @@
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.write_info {
+  display: flex;
+}

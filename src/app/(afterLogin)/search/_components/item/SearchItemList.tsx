@@ -6,14 +6,18 @@ import Loading from "@/app/_components/loading/loading";
 import { useSearchInfinte } from "@/app/util/tanstack-query/useSearchInfinte";
 import Link from "next/link";
 import InfiniteScroll from "react-infinite-scroll-component";
+import styels from "./SearchItemList.module.css";
+import { useSearchParams } from "next/navigation";
 
 export default function SearchItemList() {
   const { data, fetchNextPage, hasNextPage, isLoading, isError } =
     useSearchInfinte();
 
+  const searchParams = useSearchParams();
+
   if (isLoading) return <Loading />;
 
-  console.log(data);
+  const keyword = searchParams.get("keyword");
 
   return (
     <InfiniteScroll
@@ -23,6 +27,11 @@ export default function SearchItemList() {
       hasMore={hasNextPage}
       scrollThreshold={0.8}
     >
+      <div className={styels.container}>
+        <div>
+          검색어는 <b>{keyword}</b> 이나 더미 데이터가 출력됩니다.
+        </div>
+      </div>
       {data?.pages.map((item, idx) => {
         return item?.data.map((item: ItemType) => (
           <li key={`t${item?.id}`}>

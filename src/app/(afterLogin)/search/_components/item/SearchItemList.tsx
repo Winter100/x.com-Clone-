@@ -15,9 +15,8 @@ export default function SearchItemList() {
 
   const searchParams = useSearchParams();
 
-  if (isLoading) return <Loading />;
-
   const keyword = searchParams.get("keyword");
+  if (isLoading) return <Loading />;
 
   return (
     <InfiniteScroll

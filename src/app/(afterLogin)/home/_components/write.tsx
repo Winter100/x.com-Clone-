@@ -15,9 +15,9 @@ export default function Write() {
         <InputAlert />
         <div className={styles.upload_btn_container}>
           <ul className={styles.upload_btn_ul}>
-            <li className={styles.upload_btn_li}>
+            {/* <li className={styles.upload_btn_li}>
               <Image src={"/image.svg"} alt="이미지 업로드" fill />
-            </li>
+            </li> */}
           </ul>
           <div>
             <button disabled className={styles.btn}>

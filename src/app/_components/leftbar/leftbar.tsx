@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "./leftbar.module.css";
 import Image from "next/image";
+import LeftbarItem from "./leftbarItem";
 
 export default function Leftbar() {
   return (
@@ -10,29 +11,16 @@ export default function Leftbar() {
         <Image src={"/X-Logo.png"} alt="X-Logo" width={24} height={24} />
       </Link>
       <ul className={styles.ul}>
-        <li className={styles.li}>
-          <Link href={"/home"} className={styles.liLink}>
-            <div className={styles.content}>
-              <div className={styles.image}>
-                <Image src={"/home.svg"} alt="Home" fill />
-              </div>
-              <div>홈</div>
-            </div>
-          </Link>
+        <li>
+          <LeftbarItem content="홈" link={["home"]} imageSrc={"/home.svg"} />
         </li>
         <li>
-          <Link href={"/explore"} className={styles.liLink}>
-            <div className={styles.content}>
-              <div className={styles.image}>
-                <Image src={"/search.svg"} alt="Home" fill />
-              </div>
-              <div>검색</div>
-            </div>
-          </Link>
+          <LeftbarItem
+            content="검색"
+            link={["explore", "search", "history"]}
+            imageSrc={"/search.svg"}
+          />
         </li>
-        <button className={styles.btn} type="button">
-          게시하기
-        </button>
       </ul>
       <div>테스트 유저</div>
     </nav>

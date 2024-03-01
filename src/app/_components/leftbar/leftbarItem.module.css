@@ -1,0 +1,27 @@
+.liLink {
+  display: flex;
+  height: 3.5rem;
+}
+
+.liLink:hover .content {
+  background-color: rgba(190, 190, 190, 0.4);
+}
+
+.image {
+  position: relative;
+
+  width: 24px;
+  height: 24px;
+}
+
+.active {
+  background-color: rgba(125, 197, 255, 0.4);
+}
+
+.content {
+  gap: 1rem;
+  padding: 0.7rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+}

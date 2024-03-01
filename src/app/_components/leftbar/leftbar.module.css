@@ -15,23 +15,6 @@
   padding: 0;
 }
 
-.liLink {
-  display: flex;
-  height: 3.5rem;
-}
-
-.content {
-  gap: 1rem;
-  padding: 0.7rem;
-  border-radius: 2rem;
-  display: flex;
-  align-items: center;
-}
-
-.liLink:hover .content {
-  background-color: rgba(190, 190, 190, 0.4);
-}
-
 .xlogo {
   position: relative;
   display: flex;
@@ -44,13 +27,6 @@
 .xlogo:hover {
   background-color: rgba(190, 190, 190, 0.4);
   border-radius: 2rem;
-}
-
-.image {
-  position: relative;
-
-  width: 24px;
-  height: 24px;
 }
 
 .btn {
